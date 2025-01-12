@@ -1,11 +1,11 @@
 package middleware
 
 import (
+	"github.com/GiairoZeppeli/utils/context"
+	"github.com/GiairoZeppeli/utils/responseWrapper"
 	"log"
 	"net/http"
 	"runtime/debug"
-	"utils/context"
-	"utils/responseWrapper"
 )
 
 func RecoveryMiddleware(ctx context.MyContext, next http.Handler) http.Handler {
