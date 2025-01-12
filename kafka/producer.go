@@ -55,7 +55,7 @@ func (p *ProducerImpl) Produce(message, topic string) error {
 	}
 }
 
-func (p *ProducerImpl) Close() error {
+func (p *ProducerImpl) Close() {
 	p.producer.Flush(flushTimeout)
 	p.producer.Close()
 }
